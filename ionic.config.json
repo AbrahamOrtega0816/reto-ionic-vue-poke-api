@@ -1,0 +1,7 @@
+{
+  "name": "reto-ionic-vue-poke-api",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
