@@ -1,8 +1,10 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router';
-
+import { createPinia } from 'pinia';
 import { IonicVue } from '@ionic/vue';
+import VueAwesomePaginate from "vue-awesome-paginate";
+
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/vue/css/core.css';
@@ -23,7 +25,14 @@ import '@ionic/vue/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 
+// import the necessary css file
+import "vue-awesome-paginate/dist/style.css";
+
+const pinia = createPinia()
+
 const app = createApp(App)
+  .use(VueAwesomePaginate)
+  .use(pinia)
   .use(IonicVue)
   .use(router);
   
